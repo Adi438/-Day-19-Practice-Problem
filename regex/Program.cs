@@ -10,10 +10,10 @@ namespace RegexProblems
             Console.WriteLine("\n\n----------------WELCOME TO THE REGULAR EXPRESSION (REGEX) PROGRAM------------------------\n\n");
             while (true)
             {
-                Console.Write("Enter User Password, should be Minimum 8 char: ");
+                Console.WriteLine("Enter User Password, should be Minimum 8 char,at least one UpperCase: ");
                 string password = Console.ReadLine();
                 Console.WriteLine();
-                string pass = "^[a-zA-Z 0-9]{8,}$";
+                string pass = "[A-Za-z]+[A-Za-z]{7,}";
                 if (Regex.IsMatch(password, pass))
                 {
                     Console.WriteLine("User Password is : " + password);
@@ -21,7 +21,7 @@ namespace RegexProblems
                 }
                 else
                 {
-                    Console.WriteLine("Please Enter Valid password should be Minimum 8 char: " + "\n\n");
+                    Console.WriteLine("Please Enter Valid password should be Minimum 8 char, at least one UpperCase: " + "\n\n");
                 }
 
             }

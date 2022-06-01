@@ -10,18 +10,18 @@ namespace RegexProblems
             Console.WriteLine("\n\n----------------WELCOME TO THE REGULAR EXPRESSION (REGEX) PROGRAM------------------------\n\n");
             while (true)
             {
-                Console.Write("Enter User Email ID : ");
-                string name = Console.ReadLine();
+                Console.Write("Enter User Mobile Number with Contry Code: ");
+                string mobile = Console.ReadLine();
                 Console.WriteLine();
-                string nm = "^[a-z]+.[a-z]+@?[a-z]+.(co|com|org)|.(in|us|co|com)$";  //(Ex. abc.xyz@bl.co.in) last .in is optional
-                if (Regex.IsMatch(name, nm))
+                string mo = "^[9][1][ ]+[6-9][0-9]{9}$";
+                if (Regex.IsMatch(mobile, mo))
                 {
-                    Console.WriteLine("User Email ID is : " + name);
+                    Console.WriteLine("User Mobile Number is : " + mobile);
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Please Enter Valid Email ID : \n\n Ex. abc.xyz@bl.co.in : " + "\n\n");
+                    Console.WriteLine("Please Enter Valid mobile Number with Country Code : " + "\n\n");
                 }
 
             }

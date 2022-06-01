@@ -10,18 +10,18 @@ namespace RegexProblems
             Console.WriteLine("\n\n----------------WELCOME TO THE REGULAR EXPRESSION (REGEX) PROGRAM------------------------\n\n");
             while (true)
             {
-                Console.Write("Enter User Mobile Number with Contry Code: ");
-                string mobile = Console.ReadLine();
+                Console.Write("Enter User Password, should be Minimum 8 char: ");
+                string password = Console.ReadLine();
                 Console.WriteLine();
-                string mo = "^[9][1][ ]+[6-9][0-9]{9}$";
-                if (Regex.IsMatch(mobile, mo))
+                string pass = "^[a-zA-Z 0-9]{8,}$";
+                if (Regex.IsMatch(password, pass))
                 {
-                    Console.WriteLine("User Mobile Number is : " + mobile);
+                    Console.WriteLine("User Password is : " + password);
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Please Enter Valid mobile Number with Country Code : " + "\n\n");
+                    Console.WriteLine("Please Enter Valid password should be Minimum 8 char: " + "\n\n");
                 }
 
             }

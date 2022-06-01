@@ -10,18 +10,20 @@ namespace RegexProblems
             Console.WriteLine("\n\n----------------WELCOME TO THE REGULAR EXPRESSION (REGEX) PROGRAM------------------------\n\n");
             while (true)
             {
-                Console.WriteLine("Enter Your Last Name : ");
+                Console.Write("Enter User Email ID : ");
                 string name = Console.ReadLine();
-                string nm = "^[A-Z][a-z]{2,}$";
+                Console.WriteLine();
+                string nm = "^[a-z]+.[a-z]+@?[a-z]+.(co|com|org)|.(in|us|co|com)$";  //(Ex. abc.xyz@bl.co.in) last .in is optional
                 if (Regex.IsMatch(name, nm))
                 {
-                    Console.WriteLine("Your Last is : " + name);
+                    Console.WriteLine("User Email ID is : " + name);
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Please Enter Last name start with Capital and minimum Three characters : " + false);
+                    Console.WriteLine("Please Enter Valid Email ID : \n\n Ex. abc.xyz@bl.co.in : " + "\n\n");
                 }
+
             }
         }
     }
